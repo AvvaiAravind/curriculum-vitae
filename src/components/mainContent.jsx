@@ -6,25 +6,26 @@ import { useState } from "react";
 export function MainContent() {
   const [personal, setPersonal] = useState([
     {
-      firstName: "",
-      lastName: "",
-      title: "",
+      firstName: "Suresh",
+      lastName: "Kumar R",
+      title: "Frontend Developer",
       photo: null,
-      description: "",
-      phone: "",
-      email: "",
-      address: "",
+      description:
+        "Aspiring Frontend developer with willingness to learn new things",
+      phone: "+9197878-12345",
+      email: "suresh@gmail.com",
+      address: "Shire, Bagend",
     },
   ]);
 
   const [educational, setEducational] = useState([
     {
       id: uniqid(),
-      UniversityName: "",
-      degree: "",
-      course: "",
-      fromEducational: "",
-      toEducational: "",
+      universityName: "SaiRam Engineering College",
+      degree: "M.Sc Computer Science",
+      course: "Computer Science",
+      fromEducational: "2020",
+      toEducational: "2023",
       isOpen: true,
     },
   ]);
@@ -32,12 +33,13 @@ export function MainContent() {
   const [professional, setProfessional] = useState([
     {
       id: uniqid(),
-      title: "",
-      companyName: "",
-      city: "",
-      fromProfessional: "",
-      toProfessional: "",
-      description: "",
+      title: "Frontend Developer",
+      companyName: "XBI4",
+      city: "Panpoli, Tenkasi",
+      fromProfessional: "2023",
+      toProfessional: "2025",
+      description:
+        "2 yrs experience at XBI4 with some knowledge of AWS, node.js",
       isOpen: true,
     },
   ]);
