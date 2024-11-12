@@ -1,31 +1,39 @@
-import Personal from "./personal.jsx";
-import Education from "./education";
-import Professional from "./professional";
+import { Personal } from "./personal";
+import { Educational } from "./educational";
+import { Professional } from "./professional";
 
 export function CreateCv({
-  education,
+  educational,
   professional,
   addItem,
   deleteItem,
+  submitItem,
+  editItem,
   handleTextEdit,
+  personal,
   /* handlePhotoEdit, */
 }) {
   return (
     <div className="create-cv">
       <Personal
-        onChange={handleTextEdit} /* onPhotoChange={handlePhotoEdit} */
+        onChange={handleTextEdit}
+        personal={personal} /* onPhotoChange={handlePhotoEdit} */
       />
-      <Education
-        items={education}
+      <Educational
+        items={educational}
         addItem={addItem}
         deleteItem={deleteItem}
-        section="education"
+        submitItem={submitItem}
+        editItem={editItem}
+        section="educational"
         onChange={handleTextEdit}
       />
       <Professional
         items={professional}
         addItem={addItem}
         deleteItem={deleteItem}
+        submitItem={submitItem}
+        editItem={editItem}
         section="professional"
         onChange={handleTextEdit}
       />

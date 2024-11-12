@@ -1,8 +1,8 @@
 export function ProfessionalContent({
   title,
   name,
-  from,
-  to,
+  fromProfessional,
+  toProfessional,
   city,
   description,
 }) {
@@ -10,7 +10,7 @@ export function ProfessionalContent({
     <div className="item">
       <h3 className="sub-title">{title}</h3>
       <div className="job">
-        {name} | {from} - {to} | {city}
+        {name} | {fromProfessional} - {toProfessional} | {city}
       </div>
       <div className="description">{description}</div>
     </div>

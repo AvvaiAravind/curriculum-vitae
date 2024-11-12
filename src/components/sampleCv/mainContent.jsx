@@ -1,11 +1,11 @@
-import ProfessionalContent from "./professionalContent";
+import { ProfessionalContent } from "./professionalContent.jsx";
 
-export function MainContent({ profile, items }) {
+export function MainContent({ personal, items }) {
   return (
     <div className="cv-main">
       <div className="section">
-        <h2 className="title">Profile</h2>
-        <div className="description">{profile[0].description}</div>
+        <h2 className="title">Personal</h2>
+        <div className="description">{personal[0].description}</div>
       </div>
       <div className="section">
         <h2 className="title">Work Experience</h2>
@@ -17,8 +17,8 @@ export function MainContent({ profile, items }) {
                 title={item.title}
                 name={item.companyName}
                 city={item.city}
-                from={item.from}
-                to={item.to}
+                fromProfessional={item.fromProfessional}
+                toProfessional={item.toProfessional}
                 description={item.description}
               />
             );

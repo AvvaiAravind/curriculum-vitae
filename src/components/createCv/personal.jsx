@@ -1,7 +1,7 @@
 import { Input, TextArea } from "../utility/utilityComponents";
 
-export function Personal({ onChange /* onPhotoChange */ }) {
-  const section = "profile";
+export function Personal({ onChange /* onPhotoChange */, personal }) {
+  const section = "personal";
   return (
     <div className="section">
       <div className="item">
@@ -12,12 +12,14 @@ export function Personal({ onChange /* onPhotoChange */ }) {
             onChange={onChange}
             section={section}
             id="firstName"
+            value={personal[0].firstName}
           />
           <Input
             title="Last Name"
             onChange={onChange}
             section={section}
             id="lastName"
+            value={personal[0].lastName}
           />
         </div>
         {/* <PhotoInput
@@ -31,12 +33,14 @@ export function Personal({ onChange /* onPhotoChange */ }) {
           onChange={onChange}
           section={section}
           id="title"
+          value={personal[0].title}
         />
         <TextArea
           title="Desctiption"
           onChange={onChange}
           section={section}
           id="description"
+          value={personal[0].description}
         />
 
         <Input
@@ -44,13 +48,21 @@ export function Personal({ onChange /* onPhotoChange */ }) {
           onChange={onChange}
           section={section}
           id="phone"
+          value={personal[0].phone}
         />
-        <Input title="Email" onChange={onChange} section={section} id="email" />
+        <Input
+          title="Email"
+          onChange={onChange}
+          section={section}
+          id="email"
+          value={personal[0].email}
+        />
         <Input
           title="Address"
           onChange={onChange}
           section={section}
           id="address"
+          value={personal[0].address}
         />
       </div>
     </div>

@@ -1,11 +1,16 @@
-export function HeaderSection({ profile }) {
+export function HeaderSection({ personal }) {
   return (
     <div className="cv-header">
+      {/*    {personal[0].photo ? (
+        <img src={personal[0].photo} alt="Avatar" className="photo"></img>
+      ) : (
+        <div className="photo"></div>
+      )} */}
       <div className="names">
         <div className="name">
-          {profile[0].firstName} {profile[0].lastName}
+          {personal[0].firstName} {personal[0].lastName}
         </div>
-        <div className="prof-title">{profile[0].title}</div>
+        <div className="prof-title">{personal[0].title}</div>
       </div>
     </div>
   );

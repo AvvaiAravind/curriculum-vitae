@@ -1,13 +1,13 @@
-import Main from "./Main";
-import SideBar from "./SideBar";
-import Header from "./Header";
+import { MainContent } from "./mainContent";
+import { CvPersoanlInfo } from "./cvPersonalInfo";
+import { HeaderSection } from "./headerSection";
 
-export function SampleCv({ profile, education, practice }) {
+export function SampleCv({ personal, educational, professional }) {
   return (
     <div className="cv-preview">
-      <Header profile={profile} />
-      <SideBar profile={profile} items={education} />
-      <Main profile={profile} items={practice} />
+      <HeaderSection personal={personal} />
+      <CvPersoanlInfo personal={personal} items={educational} />
+      <MainContent personal={personal} items={professional} />
     </div>
   );
 }

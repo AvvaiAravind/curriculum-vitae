@@ -1,14 +1,12 @@
-import { Input } from "../utility/utilityComponents";
-import { TextArea } from "../utility/utilityComponents";
-import { Button } from "../utility/utilityComponents";
+import { Input, Button } from "../utility/utilityComponents";
 
-export function Professional({
+export function Educational({
   items,
   addItem,
+  section,
   deleteItem,
   submitItem,
   editItem,
-  section,
   onChange,
 }) {
   return items.length ? (
@@ -18,56 +16,48 @@ export function Professional({
 
         return (
           <div className="item" key={item.id}>
-            <h2 className="title">Work Experience #{index + 1}</h2>
+            <h2 className="title">Education #{index + 1}</h2>
             {item.isOpen ? (
               <>
                 <Input
-                  title="Job Title"
+                  title="Degree"
                   onChange={onChange}
                   section={section}
                   index={index}
-                  id="title"
-                  value={item.title}
+                  id="degree"
+                  value={item.degree}
                 />
                 <Input
-                  title="Company Name"
+                  title="University or School Name"
                   onChange={onChange}
                   section={section}
                   index={index}
-                  id="companyName"
-                  value={item.companyName}
+                  id="universityName"
+                  value={item.universityName}
                 />
                 <Input
-                  title="City"
+                  title="Course"
                   onChange={onChange}
                   section={section}
                   index={index}
-                  id="city"
-                  value={item.city}
+                  id="course"
+                  value={item.course}
                 />
                 <Input
                   title="From"
                   onChange={onChange}
                   section={section}
                   index={index}
-                  id="fromProfessional"
-                  value={item.fromProfessional}
+                  id="fromEducational"
+                  value={item.fromEducational}
                 />
                 <Input
                   title="To"
                   onChange={onChange}
                   section={section}
                   index={index}
-                  id="toProfessional"
-                  value={item.toProfessional}
-                />
-                <TextArea
-                  title="Description"
-                  onChange={onChange}
-                  section={section}
-                  index={index}
-                  id="description"
-                  value={item.description}
+                  id="toEducational"
+                  value={item.toEducational}
                 />
                 <div className="buttons">
                   <Button
@@ -103,7 +93,7 @@ export function Professional({
     </div>
   ) : (
     <div className="section">
-      <h2 className="title">Work Experience</h2>
+      <h2 className="title">Education</h2>
       <Button title="Add" onClick={addItem} section={section} />
     </div>
   );

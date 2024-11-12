@@ -1,18 +1,18 @@
-import placeholderImage from "../../assets/add.svg";
+// import placeholderImage from "../../assets/add.svg";
 
-export function Button({ title, section, id, onClick }) {
+export function Button({ title, section, id, onClick, index }) {
   return (
     <button
       className="button"
       type="button"
-      onClick={(e) => onClick(e, section, id)}
+      onClick={() => onClick(section, id, index)}
     >
       {title}
     </button>
   );
 }
 
-export function Input({ onChange, title, section, index, id }) {
+export function Input({ onChange, title, section, index, id, value }) {
   return (
     <div className="input-box">
       <label htmlFor={id} className="visually-hidden">
@@ -22,12 +22,13 @@ export function Input({ onChange, title, section, index, id }) {
         type="text"
         placeholder={title}
         onChange={(e) => onChange(e, section, index, id)}
+        value={value || ""}
       ></input>
     </div>
   );
 }
 
-export function TextArea({ onChange, title, section, index, id }) {
+export function TextArea({ onChange, title, section, index, id, value }) {
   return (
     <div className="textarea-box">
       <label htmlFor={id} className="visually-hidden">
@@ -37,12 +38,13 @@ export function TextArea({ onChange, title, section, index, id }) {
         id={id}
         placeholder={title}
         onChange={(e) => onChange(e, section, index, id)}
+        value={value || ""}
       ></textarea>
     </div>
   );
 }
 
-export function PhotInput({ onChange }) {
+/* export function PhotInput({ onChange }) {
   return (
     <label htmlFor="photo" style={{ cursor: "pointer" }}>
       Choose Photo
@@ -56,4 +58,4 @@ export function PhotInput({ onChange }) {
       />
     </label>
   );
-}
+} */
